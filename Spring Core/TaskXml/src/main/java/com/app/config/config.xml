@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+<context:property-placeholder location="app.properties"/>
+
+	<bean id="course" class="com.app.model.Course">
+		<property name="cid" value="121" />
+		<property name="cname">
+			<list>
+				<value>JAVA</value>
+				<value>C++</value>
+				<value>C</value>
+			</list>
+		</property>
+		<property name="ccost">
+			<props>
+				<prop key="java">4200</prop>
+				<prop key="c++">3000</prop>
+				<prop key="c">2000</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="student" class="com.app.model.Student">
+		<property name="stdName" value="${name}" />
+		<property name="stdCourse"  >
+		<set>
+			<value>"${course}"</value>
+		</set>
+		</property>
+		<property name="stdAdd">
+			<map>
+				<entry key="1" value="Hyd" />
+				<entry key="2" value="Matri" />
+				<entry key="3" value="Syd" />
+			</map>
+		</property>
+		<property name="cob" ref="course"/>
+	</bean>
+
+</beans>
