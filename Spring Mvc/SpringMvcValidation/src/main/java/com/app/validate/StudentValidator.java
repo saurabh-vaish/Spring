@@ -60,7 +60,7 @@ public class StudentValidator implements Validator {
 		
 		if(s.getStdPwd()==null || s.getStdPwd().equals(""))
 		{
-			errors.rejectValue("stdPwd", null, "please enter your email");
+			errors.rejectValue("stdPwd", null, "please enter your password");
 		}
 		else if(s.getStdPwd().length()<6)
 		{
