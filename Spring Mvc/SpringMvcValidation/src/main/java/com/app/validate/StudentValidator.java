@@ -23,7 +23,7 @@ public class StudentValidator implements Validator {
 		String patternName = "[A-Z]{2,}";
 		String patternEmail ="^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";
 		String patternPwd = "(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{6,}";
-		
+		// String phone = "(0|91)?[7-9][0-9]{9}";
 		
 		if(s.getStdName()==null || s.getStdName().equals(""))
 		{
