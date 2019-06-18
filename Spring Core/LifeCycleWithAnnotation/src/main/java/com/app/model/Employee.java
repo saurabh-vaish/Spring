@@ -8,7 +8,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
-@PropertySource("classpath:app.properties")
+@PropertySource("app.properties")
 public class Employee  {
 
 	@Value("${id}")

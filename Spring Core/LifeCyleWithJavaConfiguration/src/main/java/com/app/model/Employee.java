@@ -10,12 +10,12 @@ public class Employee implements InitializingBean,DisposableBean {
 	
 	@Override
 	public void destroy() throws Exception {
-		System.out.println("From init method");
+		System.out.println("From destroy method");
 	}
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		System.out.println("From destroy method");
+		System.out.println("From init method");
 		
 	}	
 	

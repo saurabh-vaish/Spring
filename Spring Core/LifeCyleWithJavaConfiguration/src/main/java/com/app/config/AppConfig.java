@@ -9,7 +9,7 @@ import org.springframework.core.env.Environment;
 import com.app.model.Employee;
 
 @Configuration
-@PropertySource("classpath:app.properties")
+@PropertySource("app.properties")
 public class AppConfig {
 
 	@Autowired
