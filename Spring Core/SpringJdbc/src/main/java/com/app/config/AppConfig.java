@@ -1,6 +1,5 @@
 package com.app.config;
 
-import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -17,7 +16,9 @@ public class AppConfig {
 
 	@Autowired
 	private Environment env;
+
 	
+	// DataSource Object
 	@Bean
 	public DriverManagerDataSource dsobj()
 	{
@@ -29,6 +30,9 @@ public class AppConfig {
 		return ds;
 	}
 	
+	
+	
+	// JDBCTemplate 
 	@Bean
 	public JdbcTemplate jtobj()
 	{
